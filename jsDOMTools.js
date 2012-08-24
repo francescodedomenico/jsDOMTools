@@ -1,3 +1,6 @@
+//jsDOMTools v0.1
+//author: Francesco De Domenico
+//website: https://github.com/frankdd89/jsDOMTools
 function removeElementByID(id){
     var elem = document.getElementById(id);
     if (elem != null) elem.parentNode.removeChild(elem);

@@ -1,4 +1,6 @@
-jsDOMTools
+jsDOMTools v0.1
+author: Francesco De Domenico
+website: https://github.com/frankdd89/jsDOMTools
 ==========
 
 Some functions to manipulate DOM nodes.
