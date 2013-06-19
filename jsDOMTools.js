@@ -6,15 +6,19 @@ function removeElementByID(id){
     if (elem != null) elem.parentNode.removeChild(elem);
 }
 function getElementByClassName(tagName, className) {
-    var allTagNodes = document.getElementsByTagName(tagName);
-    if (allTagNodes != null) {
-        for (var i = 0, il = allTagNodes.length; i < il; i++) {
-            if (allTagNodes[i].getAttribute("class") == className)
-                return allTagNodes[i];
-        }
-    }
-    return null;
-}
+		var allTagNodes = document.getElementsByTagName(tagName);
+		var ret = new Array();
+		var cont = 0;
+		if (allTagNodes != null) {
+			for (var i = 0, il = allTagNodes.length; i < il; i++) {
+				if (allTagNodes[i].getAttribute("class")==className){
+						ret[cont] = allTagNodes[i];
+						cont++;
+					}
+			}
+		}
+		return ret;
+	}
 function removeElementByClassName(tagName,className){
 	var allTagNodes = document.getElementsByTagName(tagName);
 	if(allTagNodes!=null){
