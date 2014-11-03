@@ -5,6 +5,14 @@ function removeElementByID(id){
     var elem = document.getElementById(id);
     if (elem != null) elem.parentNode.removeChild(elem);
 }
+function containsString(str, toSearch){
+    for(var x=0;x<str.length;x++){
+      if(str.substring(x,x+toSearch.length)==toSearch){
+        return true;
+      }
+    }
+    return false;
+  }
 function getElementByClassName(tagName, className) {
 		var allTagNodes = document.getElementsByTagName(tagName);
 		var ret = new Array();
