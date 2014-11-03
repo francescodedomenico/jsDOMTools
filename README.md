@@ -10,6 +10,11 @@ description: searches for the toSearchString in string
 parameters: String string, the string to search in. String toSearchString, the string to search for in string.
 returns: true if the string is found, false otherwise
 
+function getElementsWithClassName(className)
+description: searches for every element cointaining the className substring in the "class" attribute.
+parameters:  String className -  the class substring we want elements to be returned.
+returns: and array of elements containing the className in the "class" attribute.
+
 function removeElementByID(idToRemove)
 description: removes the node idToRemove from the DOM
 parameters: String idToRemove, the id of the node to remove from the DOM.

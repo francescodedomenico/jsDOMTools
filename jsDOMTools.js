@@ -1,4 +1,4 @@
-//jsDOMTools v0.1
+//jsDOMTools v0.2
 //author: Francesco De Domenico
 //website: https://github.com/frankdd89/jsDOMTools
 function removeElementByID(id){
@@ -12,6 +12,16 @@ function containsString(str, toSearch){
       }
     }
     return false;
+  }
+  function getElementsWithClassName(className){
+    var allNodes = document.getElementsByTagName("html")[0].childNodes;
+    var toReturn = new Array();
+    for(var i=0;i<allNodes.length;i++){
+      var tempClass = allNodes[i].getAttribute("class");
+      if(containsString(tempClass,className))
+        toReturn.append(allNodes[i]);
+    }
+    return toReturn;
   }
 function getElementByClassName(tagName, className) {
 		var allTagNodes = document.getElementsByTagName(tagName);
