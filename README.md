@@ -36,3 +36,7 @@ description: set the visibility = hidden property to the node which has the clas
 parameters:	String nodeType, the Type of the node to hide. eg: "div","h","a".
 			String classNameToRemove, the className of the node to hide.
 returns: void.
+function sendNotification(img,title,text)
+description: sends a desktop notification (where supported)
+parameters: String img, the url of the notification icon. String title, the notification title. String text, the notification text.
+returns: void.

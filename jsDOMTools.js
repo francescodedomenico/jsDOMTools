@@ -1,4 +1,4 @@
-//jsDOMTools v0.3
+//jsDOMTools v0.4
 //author: Francesco De Domenico
 //website: https://github.com/frankdd89/jsDOMTools
 function removeElementByID(id){
@@ -68,4 +68,22 @@ function hideElementByClassName(tagName,className){
 				allTagNodes[i].style.visibility="hidden";
 		}
 	}
+}
+function sendNotification(img,title,text) {
+  if (!("Notification" in window)) {
+    alert("This browser does not support desktop notification");
+  }
+  else if (Notification.permission === "granted") {
+    var notification = new Notification(title,{ body: text, icon: img });
+  }
+  else if (Notification.permission !== 'denied') {
+    Notification.requestPermission(function (permission) {
+      if(!('permission' in Notification)) {
+        Notification.permission = permission;
+      }
+      if (permission === "granted") {
+        var notification = new Notification(title,{ body: text, icon: img });
+      }
+    });
+  }
 }
